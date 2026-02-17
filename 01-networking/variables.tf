@@ -10,8 +10,8 @@ variable "assume_role" {
   })
 
   default = {
-    role_arn    = "arn:aws:iam::005988779053:role/terraform_role"
-    external_id = "20edb746-4470-4314-9777-1c0fd2025b24"
+    role_arn    = "<ALTERAR VALOR>"
+    external_id = "<ALTERAR VALOR>"
   }
 }
 
@@ -26,11 +26,6 @@ variable "tags" {
     }
 }
 
-variable "eks_cluster_name" {
-  type = string
-  default = "eks-express-cluster"
-}
-
 
 variable vpc {
 
@@ -42,6 +37,7 @@ variable vpc {
     eip_name                 = string
     public_route_table_name  = string
     private_route_table_name = string
+    eks_cluster_name_tag     = string
   
     public_subnets = list(object ({
       name                    = string
@@ -66,6 +62,7 @@ variable vpc {
     eip_name                = "nat-gateway-eip"
     public_route_table_name = "public-route-table"
     private_route_table_name = "private-route-table"
+    eks_cluster_name_tag     = "eks-express-cluster"
 
     public_subnets = [
       {

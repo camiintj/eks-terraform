@@ -39,14 +39,14 @@ metadata:
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS":443}]'
     alb.ingress.kubernetes.io/certificate-discovery: "true"
-    external-dns.alpha.kubernetes.io/hostname: camicamp.com.br.
+    external-dns.alpha.kubernetes.io/hostname: <ALTERAR VALOR>
 spec:
   ingressClassName: alb
   tls:
   - hosts:
-    - camicamp.com.br
+    - <ALTERAR VALOR>
   rules:
-  - host: camicamp.com.br
+  - host: <ALTERAR VALOR>
     http:
       paths:
       - path: /

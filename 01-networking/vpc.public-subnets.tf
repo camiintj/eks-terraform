@@ -8,6 +8,9 @@ resource "aws_subnet" "public" {
 
      tags = { Name = "${var.vpc.name}-${var.vpc.public_subnets[count.index].name}", 
      "kubernetes.io/role/elb" = "1"
-     "kubernetes.io/cluster/${var.eks_cluster_name}" = "shared" }
+     "kubernetes.io/cluster/${var.vpc.eks_cluster_name_tag}" = "shared" 
+      Project = var.tags.Project
+      Environment = var.tags.Environment
+      }
 }
 

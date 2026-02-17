@@ -7,10 +7,10 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "cami-nsse-terraform-state-file"
+    bucket = "<ALTERAR VALOR>"
     key    = "networking/terraform.tfstate"
     region = "us-east-1"
-    dynamodb_table = "nsse-terraform-state-locking"
+    dynamodb_table = "<ALTERAR VALOR>"
   }
 }
 
